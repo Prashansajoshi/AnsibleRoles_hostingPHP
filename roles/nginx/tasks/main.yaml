@@ -1,0 +1,22 @@
+---
+
+- name: Install Nginx web server
+  become: true
+  apt: 
+    name: nginx
+    state: latest
+    update_cache: yes
+
+- name: Start Nginx service 
+  become: true
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+
+# - name: Clone the GitHub repository
+#   git:
+#     repo: https://github.com/SameepSig/Node_React_CRUD.git
+#     dest: /home/ubuntu/files
+#     force: yes

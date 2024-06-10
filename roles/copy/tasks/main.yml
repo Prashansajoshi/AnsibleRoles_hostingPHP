@@ -1,0 +1,11 @@
+# - name: Synchronize the PHP files to the web root
+#   synchronize:
+#     src: /home/ubuntu/php_folder/
+#     dest: /var/www/html/
+#     delete: yes
+#   become: true
+
+- name: Copy php files to /var/www/html/
+  command: cp -a /home/ubuntu/php_folder/. /var/www/html/
+
+

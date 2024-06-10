@@ -1,0 +1,19 @@
+- name: Hosting web app from ansible
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+
+  vars:
+    mysql_root_password: root_password
+    mysql_user: app_user
+    mysql_password: app_password
+    mysql_database: app_db
+
+  roles: 
+    - nginx
+    - mysql
+    - php
+    - git
+    - copy
+    - env
+

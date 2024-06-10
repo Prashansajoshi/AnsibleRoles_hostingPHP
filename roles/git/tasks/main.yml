@@ -1,0 +1,5 @@
+- name: Clone the GitHub repository
+  git:
+    repo: https://github.com/soocrates/PHP_CRUD_DEVOPS
+    dest: /home/ubuntu/php_folder
+    force: yes
